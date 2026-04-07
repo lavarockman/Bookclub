@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Book Club HQ - Competitive Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#61b15f",
+                        "tertiary-container": "#00400c",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "inverse-primary": "#adc7f7",
+                        "tertiary-fixed-dim": "#88d982",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-surface": "#2d3133",
+                        "surface-dim": "#d8dadc",
+                        "secondary-container": "#fc820c",
+                        "tertiary-fixed": "#a3f69c",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-fixed": "#002204",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary-container": "#5e2c00",
+                        "error-container": "#ffdad6",
+                        "secondary": "#964900",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary": "#002805",
+                        "on-secondary-fixed": "#311300",
+                        "outline-variant": "#c4c6cf",
+                        "primary": "#002045",
+                        "outline": "#74777f",
+                        "surface-variant": "#e0e3e5",
+                        "primary-container": "#1a365d",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-container": "#86a0cd",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffdcc6",
+                        "on-background": "#191c1e",
+                        "primary-fixed-dim": "#adc7f7",
+                        "background": "#f7f9fb",
+                        "surface-tint": "#455f88",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005312",
+                        "surface-container": "#eceef0",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#43474e",
+                        "on-primary-fixed": "#001b3c",
+                        "secondary-fixed-dim": "#ffb786",
+                        "on-secondary-fixed-variant": "#723600",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .tonal-transition {
+            transition: background-color 0.3s ease;
+        }
+
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+    <!-- TopAppBar -->
+    <header class="bg-slate-50 dark:bg-slate-900 fixed top-0 w-full z-50">
+        <div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+            <div class="flex items-center gap-4">
+                <h1 class="text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100">Book Club HQ</h1>
+            </div>
+        </div>
+    </header>
+    <main class="mt-20 px-3 sm:px-4 space-y-6 sm:space-y-8 max-w-screen-md mx-auto">
+        <!-- Hero: Current Assignment -->
+        <section class="relative overflow-hidden bg-primary-container rounded-xl p-6 text-white shadow-lg">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-secondary opacity-20 blur-3xl -mr-10 -mt-10"></div>
+            <div class="flex flex-col md:flex-row gap-6 relative z-10">
+                <div class="w-28 h-44 sm:w-32 sm:h-48 flex-shrink-0 shadow-2xl rounded-md overflow-hidden mx-auto md:mx-0">
+                    <img alt="Current Book" class="w-full h-full object-cover" id="hero-cover" src="" />
+                </div>
+                <div class="flex-1">
+                    <span class="text-on-primary-container font-medium text-xs sm:text-sm tracking-wider uppercase" id="hero-label"></span>
+                    <h2 class="text-xl sm:text-2xl font-extrabold mt-1 mb-2 leading-tight" id="hero-title"></h2>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-secondary-container">auto_stories</span>
+                        <p class="text-on-primary-container text-sm" id="hero-chapters"></p>
+                    </div>
+                    <div class="w-full bg-white/10 rounded-full h-2 mb-4">
+                        <div class="bg-secondary-container h-2 rounded-full" id="hero-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Member Goals Tracker: Detailed Progress -->
+        <section>
+            <h3 class="text-xl font-bold text-primary mb-4">Personal Goals</h3>
+            <div class="space-y-3" id="goals-container"></div>
+        </section>
+        <!-- Leaderboard Section -->
+        <section class="bg-primary p-6 rounded-2xl text-white">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary-container"
+                    data-icon="leaderboard">leaderboard</span>
+                Leaderboard
+            </h3>
+            <div class="bg-white/10 rounded-xl overflow-x-auto border border-white/20">
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-white/5 border-b border-white/10">
+                        <tr>
+                            <th class="py-3 px-3 sm:px-4 font-semibold text-white/70">Member</th>
+                            <th class="py-3 px-2 font-semibold text-white/70 text-center">Read</th>
+                            <th class="py-3 px-2 font-semibold text-white/70 text-center">Goals</th>
+                            <th class="py-3 px-2 font-semibold text-white/70 text-center">Attended</th>
+                            <th class="py-3 px-3 sm:px-4 font-semibold text-white/70 text-right">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5" id="leaderboard-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const MEDALS = ['🥇', '🥈', '🥉'];
+
+        async function loadDashboard() {
+            const data = await fetch('data.json').then(r => r.json());
+
+            // Hero
+            const a = data.assignment;
+            document.getElementById('hero-cover').src = a.coverImage;
+            document.getElementById('hero-label').textContent = a.label;
+            document.getElementById('hero-title').textContent = a.title;
+            document.getElementById('hero-chapters').textContent = a.chapters;
+            document.getElementById('hero-progress').style.width = a.progressPercent + '%';
+
+            // Goals
+            const goalBadge = (status, isLastWeek) => {
+                if (status === 'hit')
+                    return `<span class="text-[10px] uppercase font-bold text-on-tertiary-container bg-tertiary-fixed px-2 py-0.5 rounded-full flex-shrink-0">Hit Goal</span>`;
+                if (isLastWeek)
+                    return `<span class="text-[10px] uppercase font-bold text-error flex-shrink-0">Failed</span>`;
+                return `<span class="text-[10px] uppercase font-bold text-yellow-400 flex-shrink-0">Pending</span>`;
+            };
+            const goalIcon = (status, isLastWeek) => {
+                if (status === 'hit')
+                    return `<span class="material-symbols-outlined text-sm text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">task_alt</span>`;
+                if (isLastWeek)
+                    return `<span class="material-symbols-outlined text-sm text-error" style="font-variation-settings: 'FILL' 1;">close</span>`;
+                return `<span class="material-symbols-outlined text-sm text-yellow-400">schedule</span>`;
+            };
+
+            const goalsEl = document.getElementById('goals-container');
+            goalsEl.innerHTML = data.goals.map(m => `
+                <div class="bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 transition-all hover:translate-x-1">
+                    <div class="w-10 h-10 ${m.avatarBg} ${m.avatarText} rounded-xl flex items-center justify-center font-bold flex-shrink-0">${m.initials}</div>
+                    <div class="flex-1 min-w-0">
+                        <h4 class="font-bold text-sm mb-2">${m.name}</h4>
+                        <div class="space-y-1">
+                            <div class="flex items-start justify-between gap-2">
+                                <div class="flex items-center gap-1.5 min-w-0">
+                                    ${goalIcon(m.lastWeek.status, true)}
+                                    <p class="text-xs text-on-surface-variant">
+                                        <span class="font-semibold">Previous:</span> ${m.lastWeek.goal}
+                                    </p>
+                                </div>
+                                ${goalBadge(m.lastWeek.status, true)}
+                            </div>
+                            <div class="flex items-start justify-between gap-2">
+                                <div class="flex items-center gap-1.5 min-w-0">
+                                    ${goalIcon(m.thisWeek.status, false)}
+                                    <p class="text-xs text-on-surface-variant">
+                                        <span class="font-semibold">Current:</span> ${m.thisWeek.goal}
+                                    </p>
+                                </div>
+                                ${goalBadge(m.thisWeek.status, false)}
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+            ).join('');
+
+            // Leaderboard — sort by total descending
+            const sorted = [...data.leaderboard].sort((a, b) => (b.read + b.goals + b.attended) - (a.read + a.goals + a.attended));
+            const lastTotal = sorted[sorted.length - 1].read + sorted[sorted.length - 1].goals + sorted[sorted.length - 1].attended;
+            document.getElementById('leaderboard-body').innerHTML = sorted.map((m, i) => {
+                const total = m.read + m.goals + m.attended;
+                const dim = total === lastTotal && i === sorted.length - 1 ? 'opacity-60' : '';
+                const cell = (val) => val < 1 ? 'text-red-400' : `text-on-primary-container ${dim}`;
+                return `
+                <tr class="hover:bg-white/5 transition-colors">
+                    <td class="py-3 px-3 sm:px-4 font-bold whitespace-nowrap">${MEDALS[i] ? `<span class="mr-1">${MEDALS[i]}</span>` : ''} ${m.name}</td>
+                    <td class="py-3 px-2 text-center ${cell(m.read)}">${m.read}</td>
+                    <td class="py-3 px-2 text-center ${cell(m.goals)}">${m.goals}</td>
+                    <td class="py-3 px-2 text-center ${cell(m.attended)}">${m.attended}</td>
+                    <td class="py-3 px-3 sm:px-4 text-right font-black text-secondary-container ${dim}">${total}</td>
+                </tr>`;
+            }).join('');
+        }
+
+        loadDashboard();
+    </script>
+</body>
+
+</html>

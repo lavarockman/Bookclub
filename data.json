@@ -1,0 +1,58 @@
+{
+  "assignment": {
+    "label": "Weekly Assignment",
+    "title": "12 Rules for Life: An Antidote to Chaos",
+    "chapters": "Chapters 11 - 12",
+    "progressPercent": 95,
+    "coverImage": "https://m.media-amazon.com/images/I/71OVB8HknWL._AC_UF1000,1000_QL80_.jpg"
+  },
+  "goals": [
+    {
+      "name": "Dallin",
+      "initials": "DC",
+      "avatarBg": "bg-primary-fixed",
+      "avatarText": "text-on-primary-fixed",
+      "lastWeek": { "goal": "Do Activity and come with opener", "status": "hit" },
+      "thisWeek": { "goal": "Do Activity", "status": "incomplete" }
+    },
+    {
+      "name": "Taite",
+      "initials": "TD",
+      "avatarBg": "bg-secondary-fixed",
+      "avatarText": "text-on-secondary-fixed",
+      "lastWeek": { "goal": "Go Door Knocking", "status": "failed" },
+      "thisWeek": { "goal": "No goal set", "status": "incomplete" }
+    },
+    {
+      "name": "Levi",
+      "initials": "LV",
+      "avatarBg": "bg-primary-fixed",
+      "avatarText": "text-on-primary-fixed",
+      "lastWeek": { "goal": "Go to the gym everyday", "status": "hit" },
+      "thisWeek": { "goal": "Get Referral Wallet in a good state", "status": "incomplete" }
+    },
+    {
+      "name": "Haden",
+      "initials": "HC",
+      "avatarBg": "bg-primary-fixed",
+      "avatarText": "text-on-primary-fixed",
+      "lastWeek": { "goal": "Do activity and complete readying", "status": "hit" },
+      "thisWeek": { "goal": "Walk an hour each day", "status": "incomplete" }
+    },
+    {
+      "name": "Ben",
+      "initials": "B",
+      "avatarBg": "bg-primary-fixed",
+      "avatarText": "text-on-primary-fixed",
+      "lastWeek": { "goal": "No-Fap Streak", "status": "hit" },
+      "thisWeek": { "goal": "Keep up personal habits", "status": "incomplete" }
+    }
+  ],
+  "leaderboard": [
+    { "name": "Dallin", "read": 1, "goals": 0.5 , "attended": 1 },
+    { "name": "Taite",  "read": 1, "goals": 0, "attended": 0 },
+    { "name": "Levi",   "read": 1, "goals": 1, "attended": 1 },
+    { "name": "Haden",  "read": 1, "goals": 0.5, "attended": 1 },
+    { "name": "Ben",    "read": 1, "goals": 1, "attended": 1 }
+  ]
+}
