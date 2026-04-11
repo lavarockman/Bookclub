@@ -50,7 +50,7 @@
   ],
   "leaderboard": [
     { "name": "Dallin", "read": 1, "goals": 0.5 , "attended": 1 },
-    { "name": "Taite",  "read": 1, "goals": 0, "attended": 0 },
+    { "name": "Taite",  "read": 1, "goals": 1, "attended": 0 },
     { "name": "Levi",   "read": 1, "goals": 1, "attended": 1 },
     { "name": "Haden",  "read": 1, "goals": 0.5, "attended": 1 },
     { "name": "Ben",    "read": 1, "goals": 1, "attended": 1 }
